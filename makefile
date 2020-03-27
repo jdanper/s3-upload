@@ -2,7 +2,7 @@ BUILD			= go build
 CLEAN			= go clean -i -cache
 TEST			= go test
 INSTALL 		= go install
-BINARY_NAME 	= audit-sink
+BINARY_NAME 	= s3-upload
 
 all: clean test build install
 build: test
