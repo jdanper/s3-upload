@@ -25,12 +25,12 @@ func main() {
 		os.Exit(-1)
 	}
 
-	session, err := session.NewSession(&aws.Config{Region: aws.String(*region)})
+	sess, err := session.NewSession(&aws.Config{Region: aws.String(*region)})
 	if err != nil {
 		log.Fatal(err)
 	}
 
-	err = uploadFile(session, *file, *bucket)
+	err = uploadFile(sess, *file, *bucket)
 	if err != nil {
 		log.Fatal(err)
 	}
