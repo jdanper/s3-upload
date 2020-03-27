@@ -26,21 +26,3 @@ func logError(msg string) {
 		log.Println(fmt.Sprintf("ERROR - %s", msg))
 	}
 }
-
-func logInfo(msg string) {
-	if logLevel <= LoglevelInfo {
-		log.Println(fmt.Sprintf("INFO - %s", msg))
-	}
-}
-
-func logWarn(msg string) {
-	if logLevel <= LoglevelWarn {
-		log.Println(fmt.Sprintf("WARN - %s", msg))
-	}
-}
-
-func logDebug(msg string) {
-	if logLevel <= LoglevelDebug {
-		log.Println(fmt.Sprintf("DEBUG - %s", msg))
-	}
-}

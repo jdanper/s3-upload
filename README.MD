@@ -1,5 +1,5 @@
-# Audit Event Sink Service
-This service inserts all audit events into a database
+# S3-Upload
+Send files to a AWS S3 Bucket
 
 ### Test
 With `make test` all tests available will run.
@@ -8,19 +8,22 @@ With `make test` all tests available will run.
 Just run `make build` to build the binary. This step will run the tests before building. 
 
 ### Run
-After build step, run the application with `./audit-sink`. Make sure the environment variables are set.
+After build step, run the application with `./s3-upload`. Make sure the environment variables are set.
+
+### Arguments
+
+`bucket` - S3 bucket to which the files will be sent
+
+`file` - Path of the file
+
+`region` - S3 bucket region (default "us-east-1")
+
+##### Pass `--help` or `-h` to see available options 
 
 ### Environment
-`ENV` defaults to `debug` - options: `debug, release
 
 `LOG_LEVEL` defaults to `1` - options: `1 (DEBUG), 2 (INFO), 3 (WARNING), 4 (ERROR)`
 
-`HTTP_PORT` defaults to `8080`
+`AWS_ACCESS_KEY_ID`
 
-`DATABASE_HOST` defaults to ` `
-
-`DATABASE_PORT` defaults to `20097`
-
-`DATABASE_USERNAME` defaults to ` `
-
-`DATABASE_PASSWORD` defaults to ` `
+`AWS_SECRET_ACCESS_KEY`
